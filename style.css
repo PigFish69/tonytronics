@@ -91,3 +91,12 @@ main div p
     color: black;
     font-weight: bolder;
 }
+.footer{
+    background-color: lightblue;
+    width: auto;
+    height: 150px;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+}
