@@ -12,7 +12,7 @@
         <header>
             <img alt="logo" src="images/logo_tonytronics.png">
             <input type="text" placeholder="Zoeken naar ...">
-            <span><a href="#">Winkelmand (0)</a></span>
+            <span><a href="#" id="face">Winkelmand (0)</a></span>
             <nav>
                 <a href="#">NIEUWE PRODUCTEN</a>
                 <a href="#">MEEST VERKOCHT</a>
@@ -105,5 +105,18 @@
     <footer class="footer">
         <a href="https://graafschapcollege.nl/">Contact</a>
     </footer>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+        $('main div').on("click", function () {
+
+            const currentText = $("#face").text();
+            var numInMand = parseInt(currentText.replace(/[^0-9.]/g, ""));
+            console.log(numInMand);//12
+            numInMand++;
+            
+            $("#face").text("Winkelmand ("+numInMand+")");
+
+        })
+    </script>
     </body>
 </html>
